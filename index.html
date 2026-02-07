@@ -4,17 +4,17 @@
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Crunchblox 2009</title>
-	<link rel="icon" type="image/png" href="image/okcrunchbloxc.png">
+    <link rel="shortcut icon" href="image/faviconfr.png">
     <style>
-      /* This CSS removes all the "extra stuff" and makes the game fill the screen */
+      /* Fullscreen styles to hide the "other stuff" */
       body { padding: 0; margin: 0; overflow: hidden; background: #000; }
       #unity-container { width: 100vw; height: 100vh; display: flex; align-items: center; justify-content: center; }
       #unity-canvas { width: 100% !important; height: 100% !important; background: #231F20; }
       
-      /* Loading bar styling */
+      /* Simple Loading Bar */
       #unity-loading-bar { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); display: none; }
-      #unity-progress-bar-empty { width: 141px; height: 18px; margin-top: 10px; background: rgba(255, 255, 255, 0.2); border-radius: 10px; overflow: hidden; }
-      #unity-progress-bar-full { width: 0%; height: 100%; background: #fff; }
+      #unity-progress-bar-empty { width: 150px; height: 10px; background: rgba(255, 255, 255, 0.1); border-radius: 5px; overflow: hidden; }
+      #unity-progress-bar-full { width: 0%; height: 100%; background: #fff; transition: width 0.2s; }
     </style>
   </head>
   <body>
@@ -33,11 +33,12 @@
       var progressBarFull = document.querySelector("#unity-progress-bar-full");
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/crunchblox 2009 webport.loader.js";
+      // Updated filenames for your uncompressed build
+      var loaderUrl = buildUrl + "/cr2009web.loader.js";
       var config = {
-        dataUrl: buildUrl + "/crunchblox 2009 webport.data.gz",
-        frameworkUrl: buildUrl + "/crunchblox 2009 webport.framework.js.gz",
-        codeUrl: buildUrl + "/crunchblox 2009 webport.wasm.gz",
+        dataUrl: buildUrl + "/cr2009web.data",
+        frameworkUrl: buildUrl + "/cr2009web.framework.js",
+        codeUrl: buildUrl + "/cr2009web.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
         productName: "Crunchblox 2009",
